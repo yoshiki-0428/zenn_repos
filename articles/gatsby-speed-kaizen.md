@@ -229,11 +229,11 @@ $ traceroute tech-blog.yoshikiohashi.dev
 
 ## まずは Netlify Hosting !!
 
-<img width="1032" alt="image.png (119.8 kB)" src="https://img.esa.io/uploads/production/attachments/15569/2020/11/05/84487/81e5d60e-1831-4eca-bc18-577928f662fa.png">
+![](https://img.esa.io/uploads/production/attachments/15569/2020/11/05/84487/81e5d60e-1831-4eca-bc18-577928f662fa.png)
 
 ## お次は Firebase Hosting !!
 
-<img width="975" alt="image.png (77.7 kB)" src="https://img.esa.io/uploads/production/attachments/15569/2020/11/05/84487/e714b26f-e9bd-4f48-b0be-19499a0a8dee.png">
+![](https://img.esa.io/uploads/production/attachments/15569/2020/11/05/84487/e714b26f-e9bd-4f48-b0be-19499a0a8dee.png)
 
 ## 結果
 
