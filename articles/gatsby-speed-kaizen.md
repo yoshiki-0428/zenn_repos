@@ -22,7 +22,7 @@ published: true
 
 こちらを参考にどうぞ。前に紹介しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://tech-blog.yoshikiohashi.dev/posts/start-gatsby-blog" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Ftech-blog.yoshikiohashi.dev%2Fposts%2Fstart-gatsby-blog&amp;key=4672f5d28011347a2549354aa5d0123d"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://tech-blog.yoshikiohashi.dev/posts/start-gatsby-blog
 
 # そもそもサイトが重い原因
 
@@ -196,7 +196,7 @@ asyncをつけると取得を非同期にしてくれます。（これは有名
 
 こちらの記事で書いたCI/CDでの速度改善ですが、これはあくまでビルドした生成物の中だけの話なので、サイトを継続監視する場合は、自分で[lighthouse Server](https://hub.docker.com/r/travix/lighthouse-ci-server)を立てて対応する必要がありそうです。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://tech-blog.yoshikiohashi.dev/posts/gatsbyjs-lighthouse-ci" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Ftech-blog.yoshikiohashi.dev%2Fposts%2Fgatsbyjs-lighthouse-ci&amp;key=4672f5d28011347a2549354aa5d0123d&amp;iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://tech-blog.yoshikiohashi.dev/posts/gatsbyjs-lighthouse-ci
 
 僕は純粋に速度がどうなったかを見たいだけので、このままCI/CDでの運用にしています。
 
