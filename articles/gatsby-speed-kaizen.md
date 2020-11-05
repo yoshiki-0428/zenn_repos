@@ -1,3 +1,10 @@
+---
+title: 【まだパフォーマンス改善できてないの！？】GatsbyJSで徹底的に速度改善をした話
+emoji: 😁
+type: tech
+topics: [Gatsby, JavaScript, React, 速度改善]
+published: true
+---
 
 # はじめに
 
