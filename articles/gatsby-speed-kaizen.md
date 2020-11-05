@@ -6,6 +6,8 @@ topics: [Gatsby, JavaScript, React, 速度改善]
 published: true
 ---
 
+> この記事は https://tech-blog.yoshikiohashi.dev/posts/gatsby-speed-kaizen のマルチポストになります。
+
 # はじめに
 
 ある日何気なく自分のブログの Light Houseの結果を確認してみた日のことでした。。。
