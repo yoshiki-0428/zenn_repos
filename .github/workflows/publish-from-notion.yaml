@@ -1,0 +1,37 @@
+name: Publish Personal Notion Articles
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: {}  # 手動実行も可能
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install Dependencies with Bun
+        run: bun install
+
+      - name: Run Notion to Markdown Script with Bun
+        env:
+          PERSONAL_NOTION_TOKEN: ${{ secrets.PERSONAL_NOTION_TOKEN }}
+          PERSONAL_NOTION_DATABASE_ID: ${{ secrets.PERSONAL_NOTION_DATABASE_ID }}
+        run: bun run scripts/index.ts
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "your_email@example.com"
+          git config --local user.name "Your Name"
+          git add articles/*.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Update articles from Notion"
+            git push
+          else
+            echo "No changes to commit."
+          fi
