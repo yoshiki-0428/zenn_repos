@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "your_email@example.com"
-          git config --local user.name "Your Name"
+          git config --local user.email "zenn-bot@github.com"
+          git config --local user.name "zenn-bot"
           git add articles/*.md
           if ! git diff --cached --quiet; then
             git commit -m "Update articles from Notion"
