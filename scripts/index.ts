@@ -1,13 +1,13 @@
-// index.ts
+// scripts/index.ts
 import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
-import { Client } from '@notionhq/client';
-import { NotionToMarkdown } from 'notion-to-md';
+import {Client} from '@notionhq/client';
+import {NotionToMarkdown} from 'notion-to-md';
 
 // Notion API のクライアントを初期化
-const notion = new Client({ auth: process.env.PERSONAL_NOTION_TOKEN });
-const n2m = new NotionToMarkdown({ notionClient: notion });
+const notion = new Client({auth: process.env.PERSONAL_NOTION_TOKEN});
+const n2m = new NotionToMarkdown({notionClient: notion});
 
 // 環境変数から Notion データベース ID を取得
 const databaseId = process.env.PERSONAL_NOTION_DATABASE_ID;
@@ -24,15 +24,11 @@ if (!databaseId) {
  *  - 長さが50文字を超える場合は50文字に切り詰める
  */
 function cleanSlug(raw: string): string {
-  // 小文字に変換
   let slug = raw.toLowerCase();
-  // 半角英数字、ハイフン、アンダースコア以外を除去
   slug = slug.replace(/[^a-z0-9-_]/g, '');
-  // 12文字未満なら、末尾に 'a' を補って12文字にする
   if (slug.length < 12) {
     slug = slug.padEnd(12, 'a');
   }
-  // 50文字以上なら切り詰める
   if (slug.length > 50) {
     slug = slug.substring(0, 50);
   }
@@ -41,18 +37,18 @@ function cleanSlug(raw: string): string {
 
 (async () => {
   try {
-    // 例：Status プロパティが "publish" かつ、Public=true で、ZennTypeが設定されている記事を取得
+    // 例：Publicがtrueかつ、ZennTypeが設定されている記事を取得
     const response = await notion.databases.query({
       database_id: databaseId,
       filter: {
         and: [
           {
             property: 'Public',
-            checkbox: { equals: true }
+            checkbox: {equals: true}
           },
           {
             property: 'ZennType',
-            select: { is_not_empty: true }
+            select: {is_not_empty: true}
           },
         ]
       },
@@ -67,6 +63,9 @@ function cleanSlug(raw: string): string {
       fs.mkdirSync(articlesDir);
     }
 
+    // Notionから生成されたslugの一覧を保持する配列
+    const generatedSlugs = new Set<string>();
+
     for (const page of pages) {
       const pageId: string = page.id;
 
@@ -80,15 +79,16 @@ function cleanSlug(raw: string): string {
           pageId.replace(/-/g, '');
       // ルールに則ってslugをクリーンにする
       const slug = cleanSlug(rawSlug);
+      generatedSlugs.add(slug);
 
       // notion-to-md でページ内容を Markdown に変換
       const mdBlocks = await n2m.pageToMarkdown(pageId);
       const mdString = n2m.toMarkdownString(mdBlocks);
 
-      // zenn type
+      // zenn type の取得
       const zennType = page.properties.ZennType.select.name;
 
-      // Zenn 用 Front Matter の生成（必要に応じて編集）
+      // Zenn 用 Front Matter の生成
       const frontMatter = `---
 title: ${title}
 emoji: ${page.icon?.emoji ?? '📝'}
@@ -98,13 +98,27 @@ published: true
 ---
 
 `;
-      // ※ mdString.parent ではなく mdString を利用する場合もあります。実際の出力内容に合わせて調整してください。
+      // ※ mdString.parent を使用しているのは、notion-to-md の出力構造に合わせています。
       const content = frontMatter + mdString.parent;
 
       // ファイルの出力
       const filePath = path.join(articlesDir, `${slug}.md`);
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`File created: ${filePath}`);
+    }
+
+    // 既存のarticlesディレクトリ内の.mdファイルを走査し、
+    // 生成されたslugに含まれていないファイルを削除する
+    const files = fs.readdirSync(articlesDir);
+    for (const file of files) {
+      if (path.extname(file) === '.md') {
+        const baseName = path.basename(file, '.md');
+        if (!generatedSlugs.has(baseName)) {
+          const filePath = path.join(articlesDir, file);
+          fs.unlinkSync(filePath);
+          console.log(`Deleted obsolete file: ${filePath}`);
+        }
+      }
     }
   } catch (error) {
     console.error('Error occurred:', error);
