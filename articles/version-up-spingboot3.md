@@ -110,7 +110,9 @@ SpringBoot3では `@GetMapping(value = { "/api/hoge-hoge" })` と書かれてい
 ## 🍠 TIPS OpenRewriteで一気にSpringBoot対応の変更点をまとめて変更する
 
 
-[bookmark](https://hirabay.net/?p=292)
+
+@[card](https://hirabay.net/?p=292)
+
 
 
 OpenRewriteというツールを使うとjavaxやjakartaなどの記述をまとめて書き換えることが可能です。他にもCheckStyleの記述に合わせて強制的に書き換えることも可能みたいです。
@@ -122,7 +124,7 @@ OpenRewriteというツールを使うとjavaxやjakartaなどの記述をまと
 rewrite.ymlというファイルをプロジェクト直下に置きます。
 
 
-```yaml
+```yaml:rewrite.yml
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: custom.SpringBootMigration

@@ -77,7 +77,9 @@ function async uploadImage(
 この方の記事がかなりわかりやすくまとまっていますが、自己理解のため書いていきます。
 
 
-[bookmark](http://var.blog.jp/archives/62330155.html)
+
+@[card](http://var.blog.jp/archives/62330155.html)
+
 
 - Blob, Fileについて
 	- Fileはファイルの場所を参照してファイル名、最終更新日などを取り出せます
@@ -97,8 +99,8 @@ function async uploadImage(
 	- DataURIではbase64を使うことが多いのでただのバイナリー値を64文字の英数字＋記号で表します。
 	- **btoa** (binary to ascii)でbase64化、**atob** (ascii to binary)でバイナリ化ができるようになります。
 	- 制御文字とか入らないようにしてるので同じデータを表すにも**必要なデータ量がちょっと増えます**
-<details>
-<summary>形式変換のチートシート（上記サイトより引用）</summary>
+:::details 形式変換のチートシート（上記サイトより引用）
+
 
 ```javascript
 // BinaryString -> Uint8Array
@@ -178,10 +180,11 @@ function read(blob){
 ```
 
 
-</details>
+
+:::
 
 
-![引用: http://var.blog.jp/](https://livedoor.blogimg.jp/netomemo-techpc/imgs/2/f/2f3dc0e4-s.png)
+![引用: ](https://livedoor.blogimg.jp/netomemo-techpc/imgs/2/f/2f3dc0e4-s.png)
 
 
 ## 以上の形式を理解した上でコードを見る
@@ -256,38 +259,60 @@ aaaabbbbbccccc
 # HTTPの良書たち
 
 
-[bookmark](https://amzn.to/3VX0KGK)
+
+@[card](https://amzn.to/3VX0KGK)
 
 
-[bookmark](https://amzn.to/3VDzq0g)
 
 
-[bookmark](https://amzn.to/3VXDXdR)
+@[card](https://amzn.to/3VDzq0g)
+
+
+
+
+@[card](https://amzn.to/3VXDXdR)
+
 
 
 ## 引用(彷徨ったときのリンクたち)
 
 
-[link_preview](https://github.com/form-data/form-data/issues/220)
+
+@[card](https://github.com/form-data/form-data/issues/220)
 
 
-[bookmark](https://stackoverflow.com/questions/6850276/how-to-convert-dataurl-to-file-object-in-javascript)
 
 
-[bookmark](https://stackoverflow.com/questions/73466429/appending-blob-to-form-data-throws-typeerror-source-on-is-not-a-function)
+@[card](https://stackoverflow.com/questions/6850276/how-to-convert-dataurl-to-file-object-in-javascript)
 
 
-[bookmark](https://qiita.com/tanakahb/items/3714683b01642d907cd9)
 
 
-[bookmark](https://api.slack.com/methods/files.upload)
+@[card](https://stackoverflow.com/questions/73466429/appending-blob-to-form-data-throws-typeerror-source-on-is-not-a-function)
 
 
-[bookmark](http://var.blog.jp/archives/62330155.html)
 
 
-[bookmark](https://www.kwbtblog.com/entry/2019/03/08/043739)
+@[card](https://qiita.com/tanakahb/items/3714683b01642d907cd9)
 
 
-[bookmark](https://nodejs.org/api/buffer.html#buffer)
+
+
+@[card](https://api.slack.com/methods/files.upload)
+
+
+
+
+@[card](http://var.blog.jp/archives/62330155.html)
+
+
+
+
+@[card](https://www.kwbtblog.com/entry/2019/03/08/043739)
+
+
+
+
+@[card](https://nodejs.org/api/buffer.html#buffer)
+
 

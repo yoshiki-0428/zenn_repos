@@ -22,7 +22,7 @@ PyGithubを使用してファイルをコミットするコードを書いたの
 [https://github.com/yoshiki-0428/esa-source-lambda](https://github.com/yoshiki-0428/esa-source-lambda)
 
 
-![3cd30d55-cd21-4753-bb4c-5351c395d39e.png](https://img.esa.io/uploads/production/attachments/15569/2020/06/12/82539/3cd30d55-cd21-4753-bb4c-5351c395d39e.png)
+![https://img.esa.io/uploads/production/attachments/15569/2020/06/12/82539/3cd30d55-cd21-4753-bb4c-5351c395d39e.png](https://img.esa.io/uploads/production/attachments/15569/2020/06/12/82539/3cd30d55-cd21-4753-bb4c-5351c395d39e.png)
 
 
 # 内容

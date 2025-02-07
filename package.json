@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@notionhq/client": "^2.2.15",
+    "cloudinary": "^2.5.1",
     "dotenv": "^16.4.7",
     "notion-to-md": "^3.1.4"
   },

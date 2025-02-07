@@ -46,13 +46,19 @@ log.Print(newArray)
 ```
 
 
-[bookmark](https://go.dev/play/p/KpvcJUc-IhG)
+
+@[card](https://go.dev/play/p/KpvcJUc-IhG)
 
 
-> 💡 こちらでコメントされましたが、上のコードはスレッドセーフではなく共有リソースをマルチスレッドでアクセスしてるので、 `sync.Mutex` でLock~Unlockをしたほうが良いです🙏 [参考](https://go-tour-jp.appspot.com/concurrency/9)
+
+:::message
+こちらでコメントされましたが、上のコードはスレッドセーフではなく共有リソースをマルチスレッドでアクセスしてるので、 `sync.Mutex` でLock~Unlockをしたほうが良いです🙏 [参考](https://go-tour-jp.appspot.com/concurrency/9)
+:::
 
 
-[embed](https://twitter.com/yusuktan/status/1590912980287647744?t=aJVQnBezd3RkbnQwSPejRA&s=19)
+
+https://twitter.com/yusuktan/status/1590912980287647744?t=aJVQnBezd3RkbnQwSPejRA&s=19
+
 
 
 # ✌️考慮したコード
@@ -90,7 +96,9 @@ log.Print(array)
 ```
 
 
-[bookmark](https://go.dev/play/p/iyYUVmh0VG2)
+
+@[card](https://go.dev/play/p/iyYUVmh0VG2)
+
 
 
 # 🏌️‍♂️おわりに
@@ -108,13 +116,17 @@ golang何も考えなくてもすらすら書けるようになりたい。。�
 ## Web Applicationを学びたい人向け
 
 
-[bookmark](https://amzn.to/3Uklk3p)
+
+@[card](https://amzn.to/3Uklk3p)
+
 
 
 ## 並行処理を学びたい人向け
 
 
-[bookmark](https://amzn.to/3TmRABA)
+
+@[card](https://amzn.to/3TmRABA)
+
 
 
 # 参考サイト

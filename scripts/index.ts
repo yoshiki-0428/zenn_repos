@@ -3,11 +3,11 @@ import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import {Client} from '@notionhq/client';
-import {NotionToMarkdown} from 'notion-to-md';
+import {n2m} from "./transformer.ts";
+import {replaceImages} from "./utis.ts";
 
 // Notion API のクライアントを初期化
 const notion = new Client({auth: process.env.PERSONAL_NOTION_TOKEN});
-const n2m = new NotionToMarkdown({notionClient: notion});
 
 // 環境変数から Notion データベース ID を取得
 const databaseId = process.env.PERSONAL_NOTION_DATABASE_ID;
@@ -77,6 +77,7 @@ function cleanSlug(raw: string): string {
       const rawSlug: string =
           (slugProp && slugProp.rich_text?.[0]?.plain_text.replace(/\s+/g, '-')) ||
           pageId.replace(/-/g, '');
+
       // ルールに則ってslugをクリーンにする
       const slug = cleanSlug(rawSlug);
       generatedSlugs.add(slug);
@@ -99,7 +100,26 @@ published: true
 
 `;
       // ※ mdString.parent を使用しているのは、notion-to-md の出力構造に合わせています。
-      const content = frontMatter + mdString.parent;
+      if (!mdString.parent) {
+        console.error(`Error: ${title} has no content.`);
+        continue;
+      }
+      // zenn用のmarkdownに変換
+      let content = frontMatter + mdString.parent
+      // callout 💡の場合、メッセージ
+      .replace(/> 💡 (.+)/g, (match, p1) => {
+        return `:::message\n${p1}\n:::`; })
+      // callout ⚠️の場合、警告メッセージ
+      .replace(/> ⚠️ (.+)/g, (match, p1) => {
+        return `:::message alert\n${p1}\n:::`; })
+      // toggle の場合、details に変換
+      .replace(/<details>\n<summary>(.*?)<\/summary>(.*?)<\/details>/gs, (match, summary, content) => {
+        return `:::details ${summary}
+${content}
+:::`;
+      });
+
+      content = await replaceImages(content, slug);
 
       // ファイルの出力
       const filePath = path.join(articlesDir, `${slug}.md`);
@@ -112,9 +132,17 @@ published: true
     const files = fs.readdirSync(articlesDir);
     for (const file of files) {
       if (path.extname(file) === '.md') {
+        const filePath = path.join(articlesDir, file);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+
+        // ファイル内容に publication_name: "pubtech" が含まれている場合は削除をスキップ
+        if (fileContent.includes('publication_name: "pubtech"')) {
+          console.log(`Skipping file (has pubtech): ${filePath}`);
+          continue;
+        }
+
         const baseName = path.basename(file, '.md');
         if (!generatedSlugs.has(baseName)) {
-          const filePath = path.join(articlesDir, file);
           fs.unlinkSync(filePath);
           console.log(`Deleted obsolete file: ${filePath}`);
         }

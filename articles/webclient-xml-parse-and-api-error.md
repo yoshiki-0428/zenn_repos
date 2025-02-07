@@ -25,7 +25,9 @@ WebClientの基礎からXMLでのParseの仕方。エラー時の挙動設定、
 まずは公式を眺めましょう
 
 
-[bookmark](https://spring.pleiades.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html)
+
+@[card](https://spring.pleiades.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html)
+
 
 
 どうやらノンブロッキングでリアクティブにコードを書けます。
@@ -34,7 +36,9 @@ WebClientの基礎からXMLでのParseの仕方。エラー時の挙動設定、
 基本的な書き方はこちらに載っていそうです。
 
 
-[bookmark](https://hirabay.net/?p=214)
+
+@[card](https://hirabay.net/?p=214)
+
 
 
 こんな感じで色々設定値をClientごとに設定できます。
@@ -81,7 +85,9 @@ return WebClient.builder()
 ```
 
 
-[bookmark](https://spring.pleiades.io/spring-framework/docs/current/javadoc-api/org/springframework/http/codec/xml/Jaxb2XmlEncoder.html)
+
+@[card](https://spring.pleiades.io/spring-framework/docs/current/javadoc-api/org/springframework/http/codec/xml/Jaxb2XmlEncoder.html)
+
 
 
 これでClient側の準備は完了です。次はエラー時の挙動設定です。

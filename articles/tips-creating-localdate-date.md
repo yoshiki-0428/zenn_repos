@@ -128,7 +128,9 @@ for(int i=0;i<dates.size();i++){
 おすすめJava書籍。Javaをやってる人でも一度でも目を通すとだいぶ理解が深まります。
 
 
-[bookmark](https://amzn.to/3XpeqKF)
+
+@[card](https://amzn.to/3XpeqKF)
+
 
 
 ### 引用など

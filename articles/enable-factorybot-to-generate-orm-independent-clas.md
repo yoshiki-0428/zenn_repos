@@ -104,7 +104,9 @@ Serviceクラス自体にも当然テストコードはあると思いますが�
 # 参考
 
 
-[bookmark](https://thoughtbot.com/blog/tips-for-using-factory-bot-without-an-orm)
+
+@[card](https://thoughtbot.com/blog/tips-for-using-factory-bot-without-an-orm)
+
 
 
 いかがでしたか？この記事が良いと思ったらシェアお願いします！著者がすごく喜びます。

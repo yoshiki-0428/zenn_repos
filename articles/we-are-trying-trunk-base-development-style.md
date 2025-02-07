@@ -28,7 +28,7 @@ published: true
 ## Git Flowとは
 
 
-![ref: https://www.atlassian.com/ja/git/tutorials/comparing-workflows/gitflow-workflow](https://wac-cdn.atlassian.com/dam/jcr:34c86360-8dea-4be4-92f7-6597d4d5bfae/02%20Feature%20branches.svg?cdnVersion=650)
+![ref: ](https://wac-cdn.atlassian.com/dam/jcr:34c86360-8dea-4be4-92f7-6597d4d5bfae/02%20Feature%20branches.svg?cdnVersion=650)
 
 - 5種類のブランチが存在
 	- main
@@ -49,7 +49,7 @@ published: true
 ## GitHub Flowとは
 
 
-![ref: https://image.itmedia.co.jp/ait/articles/1708/01/at-it-git-15-009.jpg](https://image.itmedia.co.jp/ait/articles/1708/01/at-it-git-15-009.jpg)
+![ref: ](https://image.itmedia.co.jp/ait/articles/1708/01/at-it-git-15-009.jpg)
 
 
 上記のGit Flowをよりシンプルにしたものが、GitHub Flowです。
@@ -61,7 +61,9 @@ published: true
 ですが、現代のWebアプリケーション・サービスにおいてv1.0.0などのバージョン管理は必要でしょうか？恐らくリリース時に障害が起きたときに切り戻す以外に不要でしょう。
 
 
-> 💡 ラクマではmainにマージするたびに自動的にタグを切るようにしています。リリースする際はそのタグを使用してリリースします
+:::message
+ラクマではmainにマージするたびに自動的にタグを切るようにしています。リリースする際はそのタグを使用してリリースします
+:::
 
 
 ## トランクベース開発とは
@@ -76,7 +78,9 @@ GitHub Flowとの大きな違いは「**ブランチを放置しておくこと�
 詳しくはこちらに詳しく記載されているので興味のある人は読んでみてください。
 
 
-[bookmark](https://rheb.hatenablog.com/entry/2021/08/24/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%AF%E3%83%99%E3%83%BC%E3%82%B9%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
+@[card](https://rheb.hatenablog.com/entry/2021/08/24/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%AF%E3%83%99%E3%83%BC%E3%82%B9%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
 
 
 ## なるべく早くマージするために取り組んでいること
@@ -104,10 +108,10 @@ RepositoryのIssueの数がとんでもないことになっていませんか�
 ## 今までどうだったか
 
 
-![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9e336906-7501-43c0-b5aa-de1ca211a16c/caad38ac-affa-4553-bdc0-a3a847fb8fb9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VO6HFZLG%2F20250204%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250204T002115Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAgaCXVzLXdlc3QtMiJHMEUCIQC7wlKf1SfRsYLk9qfZ57uowWzCEhrUNsV8m0A5jnz%2BNQIgSwUe8wU88DRK%2BW8XFEqF5TKQoPQb2JNmCZ73d%2BpiPQcq%2FwMIIRAAGgw2Mzc0MjMxODM4MDUiDCy%2BHwGkDeUgy7fBfCrcA4waWzq9trA110b2xmrHXXd8y4Gd43Z151duclNtskOa0XJg%2FspiVTiGk2CxGaz4v5ACWFMUffm6drAARGEPYqqmsc55YH4lWyqFen%2BF0THwNpmNrke2IeNtrmIgqcqjQFPoF%2FB9Maj2ME6VOLaR9dE82NyGpeY8TteskjIpjSlRxzd9WVtW%2BhXR13VCzjzpjGHFJH9%2F3nvc29kEkhTV8Qco1YlGpVDfPJCoy631GDnepAlPWdI%2FvpYH4P8xSh87e%2Bh8WQOD7ENkIJcy40vHcU0iEPx0uLLJ1J%2FioC2ffNzAUPMAFF7UevYoTTJbalTp8UakmFTjmme7i%2Bxa45O7gX60A7HfRABH1c4BWVFJTVGsIkQaLvGDlMrMoGHMvcYPS0tCRoiV3RB698SFuR4oBQlPimjfdiiCdJ0c5EB%2BnmN1nPwOhdxdyN4as6cupVyvblwFQdeHi7g1LdzANy3pDfqF%2FBFFg%2Fa8fBeN3Ce3mh7s7WM6YPXBpsZ9tpq00pZ%2FdcCw4ZGl80xqIk9QcfzvVisxkHvY%2FGwYkxTKaGxTlrJYVcL%2BMZJINsRJEWyAD4UnfekHqFQUEFwbrx8%2FpEsSPfLF01oB7CIhnUpLOVDwVGGgBSnzQGy6JJZon3DTMOe3hb0GOqUBC1ryX6zsZtpdrBPSkwN8tsb9aHXGOOmvz4FD99v7V%2BXjANXA3kKTJtDBTKXQNo2z6rZA%2FGrkzuN395aOfCfvQ6Q80%2FCvW%2FHiD8NETFNhkz%2FLNiYrOcIYR6fiUqFZHbC9sOVipoddHSeEmwE1%2BwE2H0uWn9kjaV4jp3F5PC16mggww2jJziyKXPUtJz1s%2Fs8gIMZA7piFfb5VRGQ4uMp7dsqFkxYP&X-Amz-Signature=48048eecb19e5b430322e2f5cd9a1f3446a45eeb901640553f52b4f275e44ecb&X-Amz-SignedHeaders=host&x-id=GetObject)
+![we-are-trying-trunk-base-development-style-1](https://res.cloudinary.com/sales-post-system/image/upload/f_auto,q_auto/we-are-trying-trunk-base-development-style-1?_a=BAMCkGJu0)
 
-<details>
-<summary>mermaid</summary>
+:::details mermaid
+
 
 ```mermaid
 %%{init: { 'gitGraph': {'showCommitLabel':false}} }%%
@@ -128,7 +132,8 @@ gitGraph
 ```
 
 
-</details>
+
+:::
 
 
 形式的にはGitHub Flowでしたが、今までは集約ブランチを作成して集約ブランチに対して細かくレビュー＆マージをし、最終的にリリース時は集約ブランチをmain に対してリリースを行うという方法を取っていました。
@@ -143,7 +148,7 @@ gitGraph
 ここからは「小さくリリースする」を目標に考えていた理想と現実を書いていきます。
 
 
-![ref: https://blog-imgs-119.fc2.com/g/a/l/galapagonia/2b55f09a-s.jpg](https://blog-imgs-119.fc2.com/g/a/l/galapagonia/2b55f09a-s.jpg)
+![ref: ](https://blog-imgs-119.fc2.com/g/a/l/galapagonia/2b55f09a-s.jpg)
 
 
 ## 🦁理想
@@ -197,10 +202,10 @@ gitGraph
 ### 作業分担が大変
 
 
-![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9e336906-7501-43c0-b5aa-de1ca211a16c/a94e76a2-c893-445a-9ba8-0f66364da0e8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VO6HFZLG%2F20250204%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250204T002115Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAgaCXVzLXdlc3QtMiJHMEUCIQC7wlKf1SfRsYLk9qfZ57uowWzCEhrUNsV8m0A5jnz%2BNQIgSwUe8wU88DRK%2BW8XFEqF5TKQoPQb2JNmCZ73d%2BpiPQcq%2FwMIIRAAGgw2Mzc0MjMxODM4MDUiDCy%2BHwGkDeUgy7fBfCrcA4waWzq9trA110b2xmrHXXd8y4Gd43Z151duclNtskOa0XJg%2FspiVTiGk2CxGaz4v5ACWFMUffm6drAARGEPYqqmsc55YH4lWyqFen%2BF0THwNpmNrke2IeNtrmIgqcqjQFPoF%2FB9Maj2ME6VOLaR9dE82NyGpeY8TteskjIpjSlRxzd9WVtW%2BhXR13VCzjzpjGHFJH9%2F3nvc29kEkhTV8Qco1YlGpVDfPJCoy631GDnepAlPWdI%2FvpYH4P8xSh87e%2Bh8WQOD7ENkIJcy40vHcU0iEPx0uLLJ1J%2FioC2ffNzAUPMAFF7UevYoTTJbalTp8UakmFTjmme7i%2Bxa45O7gX60A7HfRABH1c4BWVFJTVGsIkQaLvGDlMrMoGHMvcYPS0tCRoiV3RB698SFuR4oBQlPimjfdiiCdJ0c5EB%2BnmN1nPwOhdxdyN4as6cupVyvblwFQdeHi7g1LdzANy3pDfqF%2FBFFg%2Fa8fBeN3Ce3mh7s7WM6YPXBpsZ9tpq00pZ%2FdcCw4ZGl80xqIk9QcfzvVisxkHvY%2FGwYkxTKaGxTlrJYVcL%2BMZJINsRJEWyAD4UnfekHqFQUEFwbrx8%2FpEsSPfLF01oB7CIhnUpLOVDwVGGgBSnzQGy6JJZon3DTMOe3hb0GOqUBC1ryX6zsZtpdrBPSkwN8tsb9aHXGOOmvz4FD99v7V%2BXjANXA3kKTJtDBTKXQNo2z6rZA%2FGrkzuN395aOfCfvQ6Q80%2FCvW%2FHiD8NETFNhkz%2FLNiYrOcIYR6fiUqFZHbC9sOVipoddHSeEmwE1%2BwE2H0uWn9kjaV4jp3F5PC16mggww2jJziyKXPUtJz1s%2Fs8gIMZA7piFfb5VRGQ4uMp7dsqFkxYP&X-Amz-Signature=c9a5a987a497244dc94edbc4bae3183e52a5b94539a9a7c058a0dff8ec2307ff&X-Amz-SignedHeaders=host&x-id=GetObject)
+![we-are-trying-trunk-base-development-style-2](https://res.cloudinary.com/sales-post-system/image/upload/f_auto,q_auto/we-are-trying-trunk-base-development-style-2?_a=BAMCkGJu0)
 
-<details>
-<summary>mermaid</summary>
+:::details mermaid
+
 
 ```mermaid
 %%{init: { 'gitGraph': {'showCommitLabel':false}} }%%
@@ -214,7 +219,8 @@ gitGraph
 ```
 
 
-</details>
+
+:::
 
 
 集約ブランチではそのブランチを各エンジニアがPullして開発すればよかったですが、トランクベースでは常にmainを見なければいけません。上記の承認フローが加わると正直トランクベース開発はあまり機能しません。なぜなら1〜2日でマージしなければいけないのにマージまでに3日もかかっていると次の作業者は AA を見なければいけません。そしてマージされるまでをちゃんとWatchしておかないと行けないので自分の作業以外のことに注意を注がなければいけないです。
@@ -235,10 +241,10 @@ gitGraph
 さすがに下記は大げさな例ですが、〇〇ブランチはどこに紐付いているのかわからなくなってしまいます。
 
 
-![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9e336906-7501-43c0-b5aa-de1ca211a16c/8f4ddb58-b96a-477a-901b-cd4e662491fe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VO6HFZLG%2F20250204%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250204T002115Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAgaCXVzLXdlc3QtMiJHMEUCIQC7wlKf1SfRsYLk9qfZ57uowWzCEhrUNsV8m0A5jnz%2BNQIgSwUe8wU88DRK%2BW8XFEqF5TKQoPQb2JNmCZ73d%2BpiPQcq%2FwMIIRAAGgw2Mzc0MjMxODM4MDUiDCy%2BHwGkDeUgy7fBfCrcA4waWzq9trA110b2xmrHXXd8y4Gd43Z151duclNtskOa0XJg%2FspiVTiGk2CxGaz4v5ACWFMUffm6drAARGEPYqqmsc55YH4lWyqFen%2BF0THwNpmNrke2IeNtrmIgqcqjQFPoF%2FB9Maj2ME6VOLaR9dE82NyGpeY8TteskjIpjSlRxzd9WVtW%2BhXR13VCzjzpjGHFJH9%2F3nvc29kEkhTV8Qco1YlGpVDfPJCoy631GDnepAlPWdI%2FvpYH4P8xSh87e%2Bh8WQOD7ENkIJcy40vHcU0iEPx0uLLJ1J%2FioC2ffNzAUPMAFF7UevYoTTJbalTp8UakmFTjmme7i%2Bxa45O7gX60A7HfRABH1c4BWVFJTVGsIkQaLvGDlMrMoGHMvcYPS0tCRoiV3RB698SFuR4oBQlPimjfdiiCdJ0c5EB%2BnmN1nPwOhdxdyN4as6cupVyvblwFQdeHi7g1LdzANy3pDfqF%2FBFFg%2Fa8fBeN3Ce3mh7s7WM6YPXBpsZ9tpq00pZ%2FdcCw4ZGl80xqIk9QcfzvVisxkHvY%2FGwYkxTKaGxTlrJYVcL%2BMZJINsRJEWyAD4UnfekHqFQUEFwbrx8%2FpEsSPfLF01oB7CIhnUpLOVDwVGGgBSnzQGy6JJZon3DTMOe3hb0GOqUBC1ryX6zsZtpdrBPSkwN8tsb9aHXGOOmvz4FD99v7V%2BXjANXA3kKTJtDBTKXQNo2z6rZA%2FGrkzuN395aOfCfvQ6Q80%2FCvW%2FHiD8NETFNhkz%2FLNiYrOcIYR6fiUqFZHbC9sOVipoddHSeEmwE1%2BwE2H0uWn9kjaV4jp3F5PC16mggww2jJziyKXPUtJz1s%2Fs8gIMZA7piFfb5VRGQ4uMp7dsqFkxYP&X-Amz-Signature=f1af3ac40f4cdf0a662d363cb54bf33e5748d6e2f4ef9636a309c33faec7702f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![we-are-trying-trunk-base-development-style-3](https://res.cloudinary.com/sales-post-system/image/upload/f_auto,q_auto/we-are-trying-trunk-base-development-style-3?_a=BAMCkGJu0)
 
-<details>
-<summary>mermaid</summary>
+:::details mermaid
+
 
 ```mermaid
 %%{init: { 'gitGraph': {'showCommitLabel':false}} }%%
@@ -257,7 +263,8 @@ gitGraph
 ```
 
 
-</details>
+
+:::
 
 
 なので粒度を大きくしてなるべく依存しないために努力をすると今度は「小さくリリース」のメリットが失われてしまうのでここだけは、**段々慣れていって最適なPR粒度を掴んで行くしかありません。**
